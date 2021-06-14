@@ -58,20 +58,20 @@ namespace PasswordConsole
             char[] password = value.ToCharArray();
             Shuffle(password);
         }
-        public static void Shuffle(char[] array)
+        public static void Shuffle(char[] ordenar)
         {
-            Random rng = new Random();
-            int n = array.Length;       
-            while (n > 1)
+            Random rnd = new Random();
+            int largo = ordenar.Length;       
+            while (largo > 1)
             {
-                int k = rng.Next(n);  
-                n--;                     
-                char temp = array[n];     
-                array[n] = array[k];
-                array[k] = temp;
+                int aleat = rnd.Next(largo);
+                largo--;                     //elijo una posicion random del array y se la asigno
+                char temp = ordenar[largo];     //a medida que el while recorre el array
+                ordenar[largo] = ordenar[aleat];
+                ordenar[aleat] = temp;
             }
             Console.WriteLine("La contraseña generada es: ");
-            Console.WriteLine(array);
+            Console.WriteLine(ordenar);
         }
 
     }
