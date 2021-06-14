@@ -24,7 +24,7 @@ namespace PasswordConsole
         {            
             char[] mayus = "ABCDEFGHIJKLMÑOPQRSTUVWXYZ".ToCharArray();
             char[] minus = "abcdefghijklmñopqrstuvwxyz".ToCharArray();
-            char[] num = "123456789".ToCharArray();
+            char[] num = "0123456789".ToCharArray();
 
             string value = "";
 
